@@ -1,0 +1,1670 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Image of Christ - Raising a generation conformed to the image of Christ through discipleship and biblical training.">
+  <meta name="keywords" content="youth ministry, discipleship, biblical training, spiritual growth, Christian community">
+  <meta name="author" content="Image of Christ">
+  <title>Image of Christ - Youth Ministry | Discipleship &amp; Spiritual Growth</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <style>
+    :root {
+      --primary-blue: #8B7355;
+      --dark-blue: #6B5344;
+      --accent-gold: #D4A574;
+      --light-bg: #F5F1ED;
+      --text-dark: #3E3E3E;
+      --text-light: #6B6B6B;
+      --text-muted: #999;
+      --border-light: #E8E3DC;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .app-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .primary-blue { color: var(--primary-blue); }
+    .accent-gold { color: var(--accent-gold); }
+
+    .btn-primary {
+      background-color: var(--primary-blue);
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--dark-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(30, 58, 95, 0.25);
+    }
+
+    .btn-secondary {
+      background-color: var(--accent-gold);
+      color: var(--primary-blue);
+      padding: 14px 32px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e5c158;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-blue);
+      border: 2px solid var(--primary-blue);
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 15px;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-blue);
+      color: white;
+    }
+
+    .nav-link {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      padding: 8px 0;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary-blue);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(15, 31, 53, 0.95) 100%), url('https://i.postimg.cc/BQpZwnz7/IOC_removebg_preview.png') center/cover;
+      background-attachment: fixed;
+      color: white;
+      padding: 100px 20px 80px;
+      text-align: center;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .hero-verse {
+      color: var(--accent-gold);
+      font-size: 14px;
+      font-style: italic;
+      margin: 0 0 24px 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin: 0 0 48px 0;
+      line-height: 1.8;
+      color: #e0e0e0;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .section {
+      padding: 100px 20px;
+      max-width: 1300px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin: 0 0 60px 0;
+      text-align: center;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      text-align: center;
+      margin: 0 auto 50px;
+      max-width: 700px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-light);
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin: 0 0 16px 0;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+
+    .card p {
+      margin: 0 0 16px 0;
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: var(--primary-blue);
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: 0.3px;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      color: var(--text-dark);
+      background-color: #fafbfc;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      background-color: white;
+      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.08);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: slideIn 0.6s ease forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .timeline-dot {
+      width: 18px;
+      height: 18px;
+      background-color: var(--accent-gold);
+      border-radius: 50%;
+      margin-top: 4px;
+      margin-right: 28px;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    }
+
+    .timeline-content {
+      flex: 1;
+    }
+
+    .timeline-year {
+      font-weight: 700;
+      color: var(--primary-blue);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .timeline-description {
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #8B6F47 0%, #6B5C3D 100%);
+      color: white;
+      padding: 60px 20px 40px;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .footer-section p {
+      color: #c0c0c0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .footer-link {
+      color: #c0c0c0;
+      text-decoration: none;
+      margin-bottom: 14px;
+      display: block;
+      transition: color 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .footer-link:hover {
+      color: var(--accent-gold);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background-color: var(--accent-gold);
+      color: var(--primary-blue);
+      transform: translateY(-3px);
+    }
+
+    .powered-by {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      color: #a0a0a0;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .powered-by img {
+      height: 24px;
+      opacity: 0.8;
+    }
+
+    .chatbot-container {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    .chatbot-toggle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(139, 115, 85, 0.35);
+      transition: all 0.3s ease;
+      font-size: 28px;
+    }
+
+    .chatbot-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(139, 115, 85, 0.45);
+    }
+
+    .chatbot-toggle.active {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+    }
+
+    .chatbot-window {
+      position: absolute;
+      bottom: 90px;
+      right: 0;
+      width: 380px;
+      height: 500px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      animation: slideUp 0.3s ease;
+    }
+
+    .chatbot-window.active {
+      display: flex;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chatbot-header {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .chatbot-header h3 {
+      margin: 0 0 4px 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .chatbot-header p {
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .message {
+      display: flex;
+      gap: 10px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message.bot {
+      justify-content: flex-start;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+    }
+
+    .message-bubble {
+      max-width: 75%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    .message.bot .message-bubble {
+      background-color: #f0ebe3;
+      color: var(--text-dark);
+      border-bottom-left-radius: 4px;
+    }
+
+    .message.user .message-bubble {
+      background-color: var(--primary-blue);
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chatbot-input-area {
+      padding: 16px;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      gap: 10px;
+    }
+
+    .chatbot-input {
+      flex: 1;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-input:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.08);
+    }
+
+    .chatbot-send {
+      background-color: var(--primary-blue);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    .chatbot-send:hover {
+      background-color: var(--dark-blue);
+      transform: translateY(-2px);
+    }
+
+    .quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 0 12px 0;
+    }
+
+    .quick-reply {
+      background-color: #f0ebe3;
+      border: 1px solid var(--border-light);
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text-dark);
+    }
+
+    .quick-reply:hover {
+      background-color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    @media (max-width: 480px) {
+      .chatbot-window {
+        width: 90vw;
+        height: 70vh;
+        max-height: 500px;
+        bottom: 80px;
+        right: 5vw;
+        left: auto;
+      }
+
+      .message-bubble {
+        max-width: 85%;
+      }
+    }
+  </style>
+  <style>
+    /* Additional Styles */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .program-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--accent-gold);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .program-card:hover {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .program-icon {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(212, 175, 55, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+    }
+
+    .program-card h3 {
+      color: var(--primary-blue);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+
+    .program-card p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin: 0 0 14px 0;
+      font-size: 1rem;
+    }
+
+    .program-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+      border-radius: 12px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-light);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+
+    .stat-label {
+      color: var(--primary-blue);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .success-message {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      display: none;
+      font-weight: 500;
+    }
+
+    .success-message.show {
+      display: block;
+      animation: slideIn 0.3s ease;
+    }
+
+    .error-message {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      display: none;
+      font-weight: 500;
+    }
+
+    .error-message.show {
+      display: block;
+      animation: slideIn 0.3s ease;
+    }
+
+    .loading-spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .contact-item {
+      text-align: center;
+    }
+
+    .contact-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(30, 58, 95, 0.05) 100%);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      color: var(--primary-blue);
+    }
+
+    .contact-item h3 {
+      color: var(--primary-blue);
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .contact-item p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-item a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary-blue);
+    }
+
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 75px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-bottom: 1px solid var(--border-light);
+      padding: 24px 20px;
+      gap: 16px;
+    }
+
+    .nav-menu.active {
+      display: flex;
+    }
+
+    .mobile-menu-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        gap: 36px;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+      }
+
+      .hero-section h1 {
+        font-size: 3.8rem;
+      }
+
+      .section {
+        padding: 100px 40px;
+      }
+
+      .hero-buttons {
+        gap: 20px;
+      }
+    }
+
+    .page-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .page-content.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .giving-method {
+      background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+      padding: 32px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--accent-gold);
+    }
+
+    .giving-method h4 {
+      color: var(--primary-blue);
+      margin: 0 0 12px 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .giving-method p {
+      margin: 0 0 12px 0;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .giving-method p:last-child {
+      margin-bottom: 0;
+    }
+
+    .vision-mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+
+      .card,
+      .program-card {
+        padding: 28px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons button {
+        width: 100%;
+      }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body>
+  <div class="app-wrapper">
+   <!-- Chatbot Widget -->
+   <div class="chatbot-container">
+    <button class="chatbot-toggle" id="chatbotToggle" onclick="toggleChatbot()" title="Chat with us"> <i data-lucide="message-circle"></i> </button>
+    <div class="chatbot-window" id="chatbotWindow">
+     <div class="chatbot-header">
+      <h3>Image of Christ</h3>
+      <p>How can we help you today?</p>
+     </div>
+     <div class="chatbot-messages" id="chatbotMessages">
+      <div class="message bot">
+       <div class="message-bubble">
+        Hello! 👋 Welcome to Image of Christ. I'm here to help you learn about our programs, answer questions, and guide you through getting involved in our ministry. What would you like to know?
+       </div>
+      </div>
+     </div>
+     <div class="chatbot-input-area">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message..." onkeypress="handleChatKeypress(event)"> <button class="chatbot-send" onclick="sendChatMessage()"> <i data-lucide="send" style="width: 18px; height: 18px;"></i> </button>
+     </div>
+    </div>
+   </div><!-- Navigation -->
+   <nav>
+    <div class="nav-container">
+     <a href="#" class="logo" onclick="navigateTo('home'); return false;"> <img src="https://i.postimg.cc/vHh8SZjm/photo_2025_05_17_05_08_49_removebg_preview_(1).png" alt="Image of Christ" loading="lazy" onerror="console.error('Logo image failed to load:', this.src); this.style.display='none'; this.parentElement.textContent = 'IOC';"> Image of Christ </a> <button class="mobile-menu-btn" id="menuBtn" onclick="toggleMenu()"> <i data-lucide="menu"></i> </button>
+     <div class="nav-menu" id="navMenu">
+      <a href="#" class="nav-link active" onclick="navigateTo('home'); closeMenu(); return false;">Home</a> <a href="#" class="nav-link" onclick="navigateTo('about'); closeMenu(); return false;">About</a> <a href="#" class="nav-link" onclick="navigateTo('programs'); closeMenu(); return false;">Programs</a> <a href="#" class="nav-link" onclick="navigateTo('join'); closeMenu(); return false;">Join Us</a> <a href="#" class="nav-link" onclick="navigateTo('donate'); closeMenu(); return false;">Donate</a> <a href="#" class="nav-link" onclick="navigateTo('contact'); closeMenu(); return false;">Contact</a>
+     </div>
+    </div>
+   </nav><!-- Home Page -->
+   <div id="home" class="page-content active">
+    <!-- Hero Section -->
+    <section class="hero-section">
+     <div class="hero-content">
+      <p class="hero-verse">Romans 8:29</p>
+      <h1 id="hero-title">Raising a Generation Conformed to the Image of Christ</h1>
+      <p class="hero-description" id="hero-description">We are discipling the next generation through the Word of God, equipping youth with spiritual foundation, biblical knowledge, and Christ-centered character for life transformation.</p>
+      <div class="hero-buttons">
+       <button class="btn-secondary" onclick="navigateTo('join'); return false;">Join the Movement</button> <button class="btn-outline" onclick="navigateTo('donate'); return false;">Support Us</button>
+      </div>
+     </div>
+    </section><!-- Vision & Mission -->
+    <section class="section" style="background-color: var(--light-bg);">
+     <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="section-title">Our Vision &amp; Mission</h2>
+      <div class="vision-mission-grid">
+       <div class="card">
+        <h3 style="margin-bottom: 20px;">Vision</h3>
+        <p id="vision-text" style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.9;">A generation transformed by Christ's image, standing firm in biblical truth, and equipped to impact the world with spiritual conviction and moral excellence.</p>
+       </div>
+       <div class="card">
+        <h3 style="margin-bottom: 20px;">Mission</h3>
+        <p id="mission-text" style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.9;">To disciple youth through intensive biblical training, spiritual warfare awareness, and prayer-centered community, building a foundation of faith that transforms lives and honors God.</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Ministry Timeline -->
+    <section class="section">
+     <h2 class="section-title">Our Journey</h2>
+     <div style="max-width: 750px; margin: 0 auto;">
+      <div class="timeline">
+       <div class="timeline-item" style="animation-delay: 0.1s;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+         <div class="timeline-year">
+          2014
+         </div>
+         <div class="timeline-description">
+          Image of Christ was founded with a burden to reach and disciple youth in Wolaita Sodo, beginning with small group meetings focused on biblical foundation.
+         </div>
+        </div>
+       </div>
+       <div class="timeline-item" style="animation-delay: 0.2s;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+         <div class="timeline-year">
+          2015
+         </div>
+         <div class="timeline-description">
+          First regional training organized, attracting youth from multiple communities. Spiritual warfare curriculum was developed and implemented.
+         </div>
+        </div>
+       </div>
+       <div class="timeline-item" style="animation-delay: 0.3s;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+         <div class="timeline-year">
+          2016
+         </div>
+         <div class="timeline-description">
+          Established weekly prayer gatherings and launched youth resource articles on self-acceptance, friendship, and faith development.
+         </div>
+        </div>
+       </div>
+       <div class="timeline-item" style="animation-delay: 0.4s;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+         <div class="timeline-year">
+          2017 - Present
+         </div>
+         <div class="timeline-description">
+          Continuous expansion with specialized trainings, mentorship programs, and digital outreach. Now serving hundreds of young believers across the region.
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div><!-- About Page -->
+   <div id="about" class="page-content">
+    <section class="section">
+     <h1 class="section-title">About Image of Christ</h1>
+     <div style="max-width: 950px; margin: 0 auto; margin-top: 40px;">
+      <div class="card" style="margin-bottom: 50px; border-left: 4px solid var(--accent-gold);">
+       <h3>Our Story</h3>
+       <p>Image of Christ was birthed from a deep conviction that today's youth need spiritual foundation, biblical knowledge, and Christ-centered mentorship. Founded in 2014, the ministry recognized a critical gap in discipleship—many young believers were navigating spiritual warfare without proper preparation or understanding of God's Word.</p>
+       <p style="margin-bottom: 0;">What began as small group meetings in Wolaita Sodo has grown into a vibrant, mission-focused community reaching hundreds of young people. Our approach combines intensive biblical training, practical spiritual guidance, and genuine community support.</p>
+      </div>
+      <div style="margin-bottom: 50px;">
+       <h2 style="color: var(--primary-blue); margin-bottom: 40px; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px;">The Challenge Youth Face</h2>
+       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+        <div class="card">
+         <h3 style="color: var(--accent-gold); margin-bottom: 16px; font-size: 1.2rem;">Spiritual Confusion</h3>
+         <p style="margin-bottom: 0;">A generation bombarded with contradictory messages about identity, purpose, and faith needs clear biblical truth.</p>
+        </div>
+        <div class="card">
+         <h3 style="color: var(--accent-gold); margin-bottom: 16px; font-size: 1.2rem;">Spiritual Warfare</h3>
+         <p style="margin-bottom: 0;">Young believers often lack awareness and preparation for the spiritual battles they face daily.</p>
+        </div>
+        <div class="card">
+         <h3 style="color: var(--accent-gold); margin-bottom: 16px; font-size: 1.2rem;">Lack of Community</h3>
+         <p style="margin-bottom: 0;">Isolation weakens faith. Youth need authentic, supportive community with older believers as mentors.</p>
+        </div>
+       </div>
+      </div>
+      <div class="card" style="background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%); border: 1px solid var(--border-light); border-left: 4px solid var(--accent-gold);">
+       <h3>Our Response: A Spiritual Foundation</h3>
+       <p>We believe that every young person can be transformed by God's Word and the Holy Spirit. Through discipleship, we help youth:</p>
+       <ul style="color: var(--text-light); line-height: 2; margin-top: 20px; padding-left: 24px; list-style: none;">
+        <li style="position: relative; padding-left: 0;">Understand their true identity in Christ</li>
+        <li style="position: relative; padding-left: 0;">Develop a deep, personal relationship with God's Word</li>
+        <li style="position: relative; padding-left: 0;">Build spiritual awareness and resistance to deception</li>
+        <li style="position: relative; padding-left: 0;">Connect with a community of believers who support their growth</li>
+        <li style="position: relative; padding-left: 0;">Step into their purpose as young agents of transformation</li>
+       </ul>
+      </div>
+     </div>
+    </section>
+   </div><!-- Programs Page -->
+   <div id="programs" class="page-content">
+    <section class="section">
+     <h1 class="section-title">Our Programs</h1>
+     <p class="section-subtitle">We offer specialized discipleship programs designed to equip youth with biblical knowledge, spiritual strength, and community support.</p>
+     <div class="program-grid">
+      <div class="program-card">
+       <div class="program-icon">
+        <i data-lucide="book-open" style="width: 28px; height: 28px;"></i>
+       </div>
+       <h3>Week-Long Intensive Trainings</h3>
+       <p>Deep biblical studies covering Old Testament, New Testament, theology, and Christian living. Participants engage with God's Word in a structured, immersive environment designed for genuine spiritual growth.</p>
+       <p style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0;">Format: 5-day sessions · Multiple times yearly</p>
+      </div>
+      <div class="program-card">
+       <div class="program-icon">
+        <i data-lucide="shield" style="width: 28px; height: 28px;"></i>
+       </div>
+       <h3>Spiritual Warfare Teachings</h3>
+       <p>Comprehensive curriculum on the reality of spiritual warfare, biblical discernment, and practical strategies for spiritual defense. Youth learn to identify deception and stand firm in Christ.</p>
+       <p style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0;">Format: Monthly sessions · Interactive discussions</p>
+      </div>
+      <div class="program-card">
+       <div class="program-icon">
+        <i data-lucide="hands-praying" style="width: 28px; height: 28px;"></i>
+       </div>
+       <h3>Prayer Gatherings</h3>
+       <p>Regular prayer meetings focused on intercession, worship, and community prayer. These gatherings build spiritual intimacy with God and strengthen the prayer life of young believers.</p>
+       <p style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0;">Format: Weekly meetings · Morning and evening options</p>
+      </div>
+      <div class="program-card">
+       <div class="program-icon">
+        <i data-lucide="pen-tool" style="width: 28px; height: 28px;"></i>
+       </div>
+       <h3>Youth Articles &amp; Resources</h3>
+       <p><strong>Self-Acceptance:</strong> Learning to see yourself through God's eyes and embracing your identity in Christ.</p>
+       <p><strong style="margin-bottom: 0;">Friendship:</strong> Building godly friendships based on truth, accountability, and mutual spiritual growth.</p>
+      </div>
+      <div class="program-card">
+       <div class="program-icon">
+        <i data-lucide="users" style="width: 28px; height: 28px;"></i>
+       </div>
+       <h3>Mentorship Community</h3>
+       <p>One-on-one and small group mentoring relationships connecting experienced believers with young people. Mentors provide guidance, accountability, and spiritual modeling.</p>
+       <p style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0;">Format: Flexible meetings · Personalized guidance</p>
+      </div>
+      <div class="program-card">
+       <div class="program-icon">
+        <i data-lucide="lightbulb" style="width: 28px; height: 28px;"></i>
+       </div>
+       <h3>Leadership Development</h3>
+       <p>Training program for young believers called to leadership roles. Focuses on biblical leadership principles, spiritual character, and practical ministry skills.</p>
+       <p style="font-size: 0.9rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 0;">Format: Semester-based · Hands-on training</p>
+      </div>
+     </div>
+    </section>
+   </div><!-- Join Us Page -->
+   <div id="join" class="page-content">
+    <section class="section">
+     <h1 class="section-title">Join the Movement</h1>
+     <p class="section-subtitle">We invite you to be part of a generation transformed by Christ's image. Fill out the form below to get involved in Image of Christ.</p>
+     <div style="max-width: 650px; margin: 0 auto;">
+      <div id="joinSuccessMessage" class="success-message">
+       Thank you for joining! We'll be in touch soon with more information.
+      </div>
+      <div id="joinErrorMessage" class="error-message"></div>
+      <form id="joinForm" onsubmit="handleJoinSubmit(event)">
+       <div class="form-group">
+        <label class="form-label" for="joinName">Full Name *</label> <input type="text" id="joinName" class="form-input" required>
+       </div>
+       <div class="form-group">
+        <label class="form-label" for="joinEmail">Email Address *</label> <input type="email" id="joinEmail" class="form-input" required>
+       </div>
+       <div class="form-group">
+        <label class="form-label" for="joinAge">Age *</label> <input type="number" id="joinAge" class="form-input" min="13" max="35" required>
+       </div>
+       <div class="form-group">
+        <label class="form-label" for="joinCity">City *</label> <input type="text" id="joinCity" class="form-input" required>
+       </div>
+       <div class="form-group">
+        <label class="form-label" for="joinPhone">Phone / WhatsApp *</label> <input type="tel" id="joinPhone" class="form-input" required>
+       </div>
+       <div class="form-group">
+        <label class="form-label" for="joinInvolvement">How do you want to be involved? *</label> <select id="joinInvolvement" class="form-select" required> <option value="">Select an option</option> <option value="training">Attend Training Sessions</option> <option value="prayer">Join Prayer Gatherings</option> <option value="mentorship">Find a Mentor</option> <option value="leadership">Leadership Development</option> <option value="volunteer">Volunteer as a Leader</option> <option value="other">Other</option> </select>
+       </div><button type="submit" class="btn-primary" style="width: 100%; padding: 16px;"> <span id="joinButtonText">Submit Registration</span> <span id="joinLoadingSpinner" class="loading-spinner" style="display: none; margin-left: 10px;"></span> </button>
+      </form>
+     </div>
+    </section>
+   </div><!-- Donate Page -->
+   <div id="donate" class="page-content">
+    <section class="section">
+     <h1 class="section-title">Support the Movement</h1>
+     <div style="max-width: 1000px; margin: 0 auto;">
+      <div class="card" style="margin-bottom: 50px; border-left: 4px solid var(--accent-gold); text-align: center;">
+       <h3>Why Your Support Matters</h3>
+       <p>Your donation directly impacts the spiritual growth of young people in Wolaita Sodo and beyond. Every contribution helps us:</p>
+       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; text-align: left; margin-top: 28px;">
+        <div>
+         <h4 style="color: var(--primary-blue); margin: 0 0 12px 0; font-size: 1rem; font-weight: 700; letter-spacing: -0.3px;">Fund Training Materials</h4>
+         <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">Biblical resources and curriculum</p>
+        </div>
+        <div>
+         <h4 style="color: var(--primary-blue); margin: 0 0 12px 0; font-size: 1rem; font-weight: 700; letter-spacing: -0.3px;">Organize Events</h4>
+         <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">Weekly meetings and trainings</p>
+        </div>
+        <div>
+         <h4 style="color: var(--primary-blue); margin: 0 0 12px 0; font-size: 1rem; font-weight: 700; letter-spacing: -0.3px;">Support Leaders</h4>
+         <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">Compensate mentors and facilitators</p>
+        </div>
+        <div>
+         <h4 style="color: var(--primary-blue); margin: 0 0 12px 0; font-size: 1rem; font-weight: 700; letter-spacing: -0.3px;">Reach More Youth</h4>
+         <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">Expand to new communities</p>
+        </div>
+       </div>
+      </div>
+      <h2 style="color: var(--primary-blue); margin-bottom: 40px; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px;">Giving Methods</h2>
+      <div class="giving-method">
+       <h4>Telebirr</h4>
+       <p style="color: var(--text-light); margin-bottom: 12px;">Fast and secure mobile payment</p>
+       <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0;">Phone Number: +251 9XX XXX XXXX</p>
+      </div>
+      <div class="giving-method">
+       <h4>CBE Birr (Commercial Bank)</h4>
+       <p style="color: var(--text-light); margin-bottom: 12px;">Direct bank transfer via CBE</p>
+       <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0;">Account: Image of Christ Ministry</p>
+      </div>
+      <div class="giving-method">
+       <h4>Bank Transfer</h4>
+       <p style="color: var(--text-light); margin-bottom: 12px;">International or domestic transfer</p>
+       <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0;">Contact: donate@imageofchrist.org</p>
+      </div>
+      <div class="card" style="background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%); margin-top: 50px; border: 1px solid var(--border-light); border-left: 4px solid var(--accent-gold);">
+       <h3>Transparency &amp; Accountability</h3>
+       <p>We are committed to using every donation wisely and accountably. 100% of donations go directly to ministry activities. We maintain clear financial records and are always open to donor inquiries. Quarterly reports are available upon request.</p>
+       <p style="margin-bottom: 0;"><strong>Every gift makes a difference in a young believer's spiritual journey. Thank you for partnering with us in this vital work.</strong></p>
+      </div>
+     </div>
+    </section>
+   </div><!-- Contact Page -->
+   <div id="contact" class="page-content">
+    <section class="section">
+     <h1 class="section-title">Get in Touch</h1>
+     <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="contact-grid">
+       <div class="contact-item">
+        <div class="contact-icon">
+         <i data-lucide="mail" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3>Email</h3>
+        <p>Send us your questions or inquiries</p><a href="mailto:info@imageofchrist.org">info@imageofchrist.org</a>
+       </div>
+       <div class="contact-item">
+        <div class="contact-icon">
+         <i data-lucide="message-circle" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Chat with us on WhatsApp</p><a href="https://wa.me/251900000000" target="_blank" rel="noopener noreferrer">+251 900 00 0000</a>
+       </div>
+       <div class="contact-item">
+        <div class="contact-icon">
+         <i data-lucide="map-pin" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3>Location</h3>
+        <p>Visit us at our office</p>
+        <p style="color: var(--primary-blue); font-weight: 600; margin: 0;">Wolaita Sodo, Ethiopia</p>
+       </div>
+       <div class="contact-item">
+        <div class="contact-icon">
+         <i data-lucide="send" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3>Telegram</h3>
+        <p>Join our Telegram community</p><a href="https://t.me/Endex_IOC12" target="_blank" rel="noopener noreferrer">@Endex_IOC12</a>
+       </div>
+       <div class="contact-item">
+        <div class="contact-icon">
+         <i data-lucide="instagram" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3>Instagram</h3>
+        <p>Follow us on Instagram</p><a href="https://www.instagram.com/imageofchrist.pr.321/" target="_blank" rel="noopener noreferrer">@imageofchrist.pr.321</a>
+       </div>
+       <div class="contact-item">
+        <div class="contact-icon">
+         <i data-lucide="music" style="width: 36px; height: 36px;"></i>
+        </div>
+        <h3>TikTok</h3>
+        <p>Watch us on TikTok</p><a href="https://www.tiktok.com/@image.of.christ" target="_blank" rel="noopener noreferrer">@image.of.christ</a>
+       </div>
+      </div>
+      <div style="margin-top: 60px;">
+       <h2 style="color: var(--primary-blue); margin-bottom: 40px; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px;">Send us a Message</h2>
+       <div id="contactSuccessMessage" class="success-message">
+        Thank you for your message! We'll respond soon.
+       </div>
+       <div id="contactErrorMessage" class="error-message"></div>
+       <form id="contactForm" onsubmit="handleContactSubmit(event)" style="max-width: 700px;">
+        <div class="form-group">
+         <label class="form-label" for="contactName">Your Name *</label> <input type="text" id="contactName" class="form-input" required>
+        </div>
+        <div class="form-group">
+         <label class="form-label" for="contactEmail">Email Address *</label> <input type="email" id="contactEmail" class="form-input" required>
+        </div>
+        <div class="form-group">
+         <label class="form-label" for="contactPhone">Phone / WhatsApp</label> <input type="tel" id="contactPhone" class="form-input">
+        </div>
+        <div class="form-group">
+         <label class="form-label" for="contactMessage">Message *</label> <textarea id="contactMessage" class="form-textarea" required></textarea>
+        </div><button type="submit" class="btn-primary" style="width: 100%; padding: 16px;"> <span id="contactButtonText">Send Message</span> <span id="contactLoadingSpinner" class="loading-spinner" style="display: none; margin-left: 10px;"></span> </button>
+       </form>
+      </div>
+     </div>
+    </section>
+   </div><!-- Footer -->
+   <footer class="footer">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>Image of Christ</h3>
+      <p>Raising a generation conformed to the image of Christ through discipleship, biblical training, and spiritual community.</p>
+      <div class="social-icons">
+       <a href="https://www.facebook.com" class="social-icon" title="Facebook" target="_blank" rel="noopener noreferrer"> <i data-lucide="facebook" style="width: 22px; height: 22px;"></i> </a> <a href="https://www.instagram.com/imageofchrist.pr.321/" class="social-icon" title="Instagram" target="_blank" rel="noopener noreferrer"> <i data-lucide="instagram" style="width: 22px; height: 22px;"></i> </a> <a href="https://wa.me/251900000000" class="social-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer"> <i data-lucide="message-circle" style="width: 22px; height: 22px;"></i> </a> <a href="https://t.me/Endex_IOC12" class="social-icon" title="Telegram" target="_blank" rel="noopener noreferrer"> <i data-lucide="send" style="width: 22px; height: 22px;"></i> </a> <a href="https://www.tiktok.com/@image.of.christ" class="social-icon" title="TikTok" target="_blank" rel="noopener noreferrer"> <i data-lucide="music" style="width: 22px; height: 22px;"></i> </a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Quick Links</h3><a href="#" class="footer-link" onclick="navigateTo('home'); return false;">Home</a> <a href="#" class="footer-link" onclick="navigateTo('about'); return false;">About Us</a> <a href="#" class="footer-link" onclick="navigateTo('programs'); return false;">Programs</a> <a href="#" class="footer-link" onclick="navigateTo('join'); return false;">Join Us</a> <a href="#" class="footer-link" onclick="navigateTo('donate'); return false;">Donate</a> <a href="#" class="footer-link" onclick="navigateTo('contact'); return false;">Contact</a>
+     </div>
+     <div class="footer-section">
+      <h3>Contact Info</h3><a href="mailto:info@imageofchrist.org" class="footer-link">info@imageofchrist.org</a> <a href="https://wa.me/251900000000" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp: +251 900 00 0000</a>
+      <p style="margin-top: 16px; margin-bottom: 0;">Wolaita Sodo, Ethiopia</p>
+     </div>
+    </div>
+    <div class="powered-by">
+     <span>© 2024 Image of Christ Youth Ministry. All rights reserved.</span>
+    </div>
+    <div class="powered-by" style="margin-top: 16px; border: none; padding: 0;">
+     <a href="https://t.me/exsofos" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 10px; color: inherit; text-decoration: none; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><span>Powered by ExSofos System GEN</span> <img src="https://i.postimg.cc/qMwBZvYz/25Sep2424_Simon_Pro_Upload_pdf_removebg_preview.png" alt="ExSofos System GEN" loading="lazy" style="height: 24px; opacity: 0.9;" onerror="console.error('ExSofos logo failed to load:', this.src); this.style.display='none';"></a>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // SDK Configuration
+    let currentRecordCount = 0;
+    let allRecords = [];
+
+    // Element SDK Config
+    const defaultConfig = {
+      site_tagline: "Raising a Generation Conformed to the Image of Christ",
+      home_description: "We are discipling the next generation through the Word of God, equipping youth with spiritual foundation, biblical knowledge, and Christ-centered character for life transformation.",
+      vision_statement: "A generation transformed by Christ's image, standing firm in biblical truth, and equipped to impact the world with spiritual conviction and moral excellence.",
+      mission_statement: "To disciple youth through intensive biblical training, spiritual warfare awareness, and prayer-centered community, building a foundation of faith that transforms lives and honors God."
+    };
+
+    let config = { ...defaultConfig };
+
+    // Initialize Element SDK
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (updatedConfig) => {
+        config = updatedConfig;
+        
+        document.getElementById('hero-title').textContent = config.site_tagline || defaultConfig.site_tagline;
+        document.getElementById('hero-description').textContent = config.home_description || defaultConfig.home_description;
+        document.getElementById('vision-text').textContent = config.vision_statement || defaultConfig.vision_statement;
+        document.getElementById('mission-text').textContent = config.mission_statement || defaultConfig.mission_statement;
+      },
+      mapToCapabilities: (cfg) => ({
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      }),
+      mapToEditPanelValues: (cfg) => new Map([
+        ['site_tagline', cfg.site_tagline || defaultConfig.site_tagline],
+        ['home_description', cfg.home_description || defaultConfig.home_description],
+        ['vision_statement', cfg.vision_statement || defaultConfig.vision_statement],
+        ['mission_statement', cfg.mission_statement || defaultConfig.mission_statement]
+      ])
+    });
+
+    // Data SDK Handler
+    const dataHandler = {
+      onDataChanged(data) {
+        allRecords = data;
+        currentRecordCount = data.length;
+      }
+    };
+
+    // Initialize Data SDK
+    (async () => {
+      const initResult = await window.dataSdk.init(dataHandler);
+      if (!initResult.isOk) {
+        console.error('Failed to initialize data SDK');
+      }
+    })();
+
+    // Navigation
+    function navigateTo(page) {
+      const pages = document.querySelectorAll('.page-content');
+      pages.forEach(p => p.classList.remove('active'));
+      
+      const targetPage = document.getElementById(page);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => link.classList.remove('active'));
+      
+      event?.target?.classList?.add('active');
+
+      closeMenu();
+      window.scrollTo(0, 0);
+    }
+
+    // Mobile Menu
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('active');
+    }
+
+    // Form Handlers
+    async function handleJoinSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('joinName').value.trim();
+      const email = document.getElementById('joinEmail').value.trim();
+      const age = document.getElementById('joinAge').value.trim();
+      const city = document.getElementById('joinCity').value.trim();
+      const phone = document.getElementById('joinPhone').value.trim();
+      const involvement = document.getElementById('joinInvolvement').value.trim();
+
+      if (!name || !email || !age || !city || !phone || !involvement) {
+        showError('joinErrorMessage', 'Please fill in all required fields.');
+        return;
+      }
+
+      if (currentRecordCount >= 999) {
+        showError('joinErrorMessage', 'Maximum registrations reached. Please try again later.');
+        return;
+      }
+
+      document.getElementById('joinButtonText').style.display = 'none';
+      document.getElementById('joinLoadingSpinner').style.display = 'inline-block';
+
+      const result = await window.dataSdk.create({
+        form_type: 'join',
+        name,
+        email,
+        age,
+        city,
+        phone,
+        involvement,
+        submitted_at: new Date().toISOString()
+      });
+
+      document.getElementById('joinButtonText').style.display = 'inline';
+      document.getElementById('joinLoadingSpinner').style.display = 'none';
+
+      if (result.isOk) {
+        document.getElementById('joinErrorMessage').classList.remove('show');
+        document.getElementById('joinSuccessMessage').classList.add('show');
+        document.getElementById('joinForm').reset();
+
+        setTimeout(() => {
+          document.getElementById('joinSuccessMessage').classList.remove('show');
+        }, 5000);
+      } else {
+        showError('joinErrorMessage', 'Error submitting registration. Please try again.');
+      }
+    }
+
+    async function handleContactSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      if (!name || !email || !message) {
+        showError('contactErrorMessage', 'Please fill in all required fields.');
+        return;
+      }
+
+      if (currentRecordCount >= 999) {
+        showError('contactErrorMessage', 'Maximum messages reached. Please try again later.');
+        return;
+      }
+
+      document.getElementById('contactButtonText').style.display = 'none';
+      document.getElementById('contactLoadingSpinner').style.display = 'inline-block';
+
+      const result = await window.dataSdk.create({
+        form_type: 'contact',
+        name,
+        email,
+        phone,
+        age: '',
+        city: '',
+        involvement: message,
+        submitted_at: new Date().toISOString()
+      });
+
+      document.getElementById('contactButtonText').style.display = 'inline';
+      document.getElementById('contactLoadingSpinner').style.display = 'none';
+
+      if (result.isOk) {
+        document.getElementById('contactErrorMessage').classList.remove('show');
+        document.getElementById('contactSuccessMessage').classList.add('show');
+        document.getElementById('contactForm').reset();
+
+        setTimeout(() => {
+          document.getElementById('contactSuccessMessage').classList.remove('show');
+        }, 5000);
+      } else {
+        showError('contactErrorMessage', 'Error sending message. Please try again.');
+      }
+    }
+
+    function showError(elementId, message) {
+      const errorElement = document.getElementById(elementId);
+      errorElement.textContent = message;
+      errorElement.classList.add('show');
+
+      setTimeout(() => {
+        errorElement.classList.remove('show');
+      }, 5000);
+    }
+
+    // Initialize icons
+    lucide.createIcons();
+
+    // Chatbot System
+    const chatbotKnowledgeBase = {
+      greetings: {
+        patterns: ['hello', 'hi', 'hey', 'greetings', 'good morning', 'good afternoon'],
+        response: 'Hello! 👋 Welcome to Image of Christ. I\'m here to help you learn about our programs, answer questions, and guide you through getting involved.'
+      },
+      programs: {
+        patterns: ['program', 'what do you do', 'activities', 'courses', 'training'],
+        response: 'We offer several programs:\n\n📚 **Week-Long Intensive Trainings** - Deep biblical studies\n🛡️ **Spiritual Warfare Teachings** - Practical spiritual guidance\n🙏 **Prayer Gatherings** - Weekly prayer meetings\n👥 **Mentorship Community** - Personal spiritual guidance\n🎓 **Leadership Development** - Training for young leaders\n\nWould you like to know more about any of these?'
+      },
+      join: {
+        patterns: ['join', 'how to join', 'participate', 'get involved', 'sign up', 'register'],
+        response: 'Great! We\'d love to have you. You can join us by:\n\n1️⃣ Visit our **"Join Us"** page\n2️⃣ Fill out the registration form\n3️⃣ Tell us how you want to be involved\n4️⃣ We\'ll be in touch!\n\nClick "Join Us" in the menu to get started. 🙌'
+      },
+      contact: {
+        patterns: ['contact', 'email', 'call', 'phone', 'reach out', 'how to contact'],
+        response: 'You can reach us through:\n\n📧 **Email:** info@imageofchrist.org\n📱 **WhatsApp:** +251 900 00 0000\n💬 **Telegram:** @Endex_IOC12\n📍 **Location:** Wolaita Sodo, Ethiopia\n\nClick "Contact" in the menu for more options. 😊'
+      },
+      donate: {
+        patterns: ['donate', 'support', 'give', 'contribution', 'help us', 'sponsor'],
+        response: 'Your support helps us reach and disciple more youth! 💝\n\n**Ways to give:**\n💳 **Telebirr** - Fast mobile payment\n🏦 **CBE Birr** - Bank transfer\n💰 **Bank Transfer** - International options\n\nVisit our **"Donate"** page for details and amounts. Every gift makes a difference!'
+      },
+      vision: {
+        patterns: ['vision', 'mission', 'purpose', 'goal', 'about us'],
+        response: '**Our Vision:** A generation transformed by Christ\'s image, standing firm in biblical truth, and equipped to impact the world with spiritual conviction.\n\n**Our Mission:** To disciple youth through intensive biblical training, spiritual warfare awareness, and prayer-centered community, building a foundation of faith that transforms lives and honors God.\n\nLearn more on our **About** page! 📖'
+      },
+      location: {
+        patterns: ['where', 'location', 'address', 'wolaita', 'office'],
+        response: 'We\'re based in **Wolaita Sodo, Ethiopia**. 📍\n\nWe serve youth throughout the region and are always expanding our reach. Are you interested in visiting or joining online?'
+      },
+      welcome: {
+        patterns: ['thank you', 'thanks', 'appreciate', 'great', 'thanks for help'],
+        response: 'You\'re very welcome! 😊 Feel free to ask any other questions or visit our website pages for more information. Looking forward to connecting with you!'
+      }
+    };
+
+    function toggleChatbot() {
+      const window = document.getElementById('chatbotWindow');
+      const toggle = document.getElementById('chatbotToggle');
+      window.classList.toggle('active');
+      toggle.classList.toggle('active');
+      
+      if (window.classList.contains('active')) {
+        document.getElementById('chatbotInput').focus();
+      }
+    }
+
+    function sendChatMessage() {
+      const input = document.getElementById('chatbotInput');
+      const message = input.value.trim();
+      
+      if (!message) return;
+
+      // Add user message
+      addChatMessage(message, 'user');
+      input.value = '';
+
+      // Simulate bot typing
+      setTimeout(() => {
+        const response = generateBotResponse(message);
+        addChatMessage(response, 'bot');
+      }, 500);
+    }
+
+    function handleChatKeypress(event) {
+      if (event.key === 'Enter') {
+        sendChatMessage();
+      }
+    }
+
+    function addChatMessage(text, sender) {
+      const messagesContainer = document.getElementById('chatbotMessages');
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}`;
+      
+      const bubble = document.createElement('div');
+      bubble.className = 'message-bubble';
+      bubble.textContent = text;
+      
+      messageDiv.appendChild(bubble);
+      messagesContainer.appendChild(messageDiv);
+      
+      // Scroll to bottom
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function generateBotResponse(userMessage) {
+      const lowerMessage = userMessage.toLowerCase();
+      
+      // Check knowledge base
+      for (const [key, data] of Object.entries(chatbotKnowledgeBase)) {
+        for (const pattern of data.patterns) {
+          if (lowerMessage.includes(pattern)) {
+            return data.response;
+          }
+        }
+      }
+
+      // Default response
+      return 'That\'s a great question! 🤔 For more information, please visit our website pages or contact us directly. You can also visit our **Contact** page for all our contact information.';
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc3cea8834e1bcc',t:'MTc3MzQ5Njg1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
